@@ -36,13 +36,13 @@ export function GlobalNav() {
       >
         {isOpen ? (
           //<XIcon className="block w-6 text-gray-400" />
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 block  text-gray-400">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 block  text-gray-400">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
 
         ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6 block  text-gray-400">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6 block  text-gray-400">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
           </svg>
           
         )}
@@ -60,6 +60,11 @@ export function GlobalNav() {
               <div key={section.name}>
                 <div className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-gray-400/80">
                   <div>{section.name}</div>
+                </div>
+                <div className="space-y-1">
+                  {section.items.map((item) => (
+                    <GlobalNavItem key={item.slug} item={item} close={close} />
+                  ))}
                 </div>
               </div>
             );
@@ -83,7 +88,7 @@ function GlobalNavItem({
   return (
     <Link
       onClick={close}
-      href={`/${item.slug}`}
+      href="/NewTask"
       className={clsx(
         'block rounded-md px-3 py-2 text-sm font-medium hover:text-gray-300',
         {
@@ -92,7 +97,8 @@ function GlobalNavItem({
         },
       )}
     >
-      {item.name}
+      Add a new task
     </Link>
+    
   );
 }

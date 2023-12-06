@@ -9,19 +9,14 @@ export type Item = {
       name: 'Layouts',
       items: [
         {
-          name: 'Nested Layouts',
-          slug: 'layouts',
+          name: 'Add a new task',
+          slug: 'NewTask',
           description: 'Create UI that is shared across routes',
         },
         {
-          name: 'Grouped Layouts',
-          slug: 'route-groups',
+          name: 'completed tasks',
+          slug: '',
           description: 'Organize routes without affecting URL paths',
-        },
-        {
-          name: 'Parallel Routes',
-          slug: 'parallel-routes',
-          description: 'Render multiple pages in the same layout',
         },
       ],
     },

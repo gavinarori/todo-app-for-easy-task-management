@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import  AddressBar  from '../components/header';
+import { Toaster } from "@/components/ui/toaster"
 import Byline from '../components/footer';
 import { GlobalNav } from '../components/global-nav';
 
@@ -19,14 +19,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="[color-scheme:dark]">
-    <body className="bg-gray-1100 overflow-y-scroll bg-[url('/grid.svg')] pb-36">
+    <body suppressHydrationWarning={true} className="bg-gray-1100 overflow-y-scroll bg-[url('/grid.svg')] pb-36">
       <GlobalNav />
       <div className="lg:pl-72">
         <div className="mx-auto max-w-4xl space-y-8 px-2 pt-20 lg:px-8 lg:py-8">
-          <div className="bg-vc-border-gradient rounded-lg p-px shadow-lg shadow-black/20">
-            <div className="rounded-lg bg-black p-3.5 lg:p-6">{children}</div>
+          <div className="bg-gradient-to-b from-gray-900 to-gray-600  rounded-lg p-px shadow-lg shadow-black/20">
+            <div className="rounded-lg bg-gradient-to-r from-gray-700 via-gray-900 to-black p-3.5 lg:p-6">
+              {children}
+              </div>
+            <Toaster />
           </div>
-          <Byline className="fixed sm:hidden" />
+          <Byline  />
         </div>
       </div>
     </body>

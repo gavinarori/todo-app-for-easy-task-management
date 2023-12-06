@@ -1,14 +1,21 @@
+"use client"
+import { useState } from 'react';
 import { demos } from '@/lib/demos';
 import Link from 'next/link';
+import { TaskEmptyPlaceholder } from '@/components/task-empty-placeholder'; // Adjust the import path accordingly
 
 export default function Page() {
-  
+  const [tasks, setTasks] = useState(demos);
+
+  if (tasks.length === 0) {
+    return <TaskEmptyPlaceholder onCreateTask={(newTask) => setTasks([...tasks, newTask])} />;
+  }
+
   return (
     <div className="space-y-8">
       <h1 className="text-xl font-medium text-gray-300">Your Lists of Tasks</h1>
-
       <div className="space-y-10 text-white">
-        {demos.map((section) => {
+        {tasks.map((section) => {
           return (
             <div key={section.name} className="space-y-5">
               <div className="text-sm font-semibold tracking-wider text-gray-400">
