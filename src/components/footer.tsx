@@ -7,7 +7,7 @@ export default function Footer() {
       <style jsx>
         {`
           .power-by {
-            color: rgb(82 82 91);
+            color: rgb(80 80 92);
             display: inline-flex;
             align-items: center;
           }
@@ -22,7 +22,7 @@ export default function Footer() {
             href="https://www.buymeacoffee.com/arorigavin"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg ml-3 mb-3 space-x-3 inline-flex justify-center items-center  px-6 mt-1 py-2 hover:scale-105 hover:bg-accent transition-all duration-75 border-accent max-w-fit mx-auto "
+            className="rounded-lg ml-3 mb-3 focus:ring space-x-3 inline-flex justify-center items-center  px-6 mt-1 py-2 hover:scale-105 hover:bg-accent transition-all duration-75 border-accent max-w-fit mx-auto "
           >
             <BuyMeACoffee className="w-6 h-6" />
             <span className="power-by-text">Buy Me Coffee</span>

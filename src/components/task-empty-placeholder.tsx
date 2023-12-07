@@ -108,8 +108,6 @@ export function TaskEmptyPlaceholder({ onCreateTask }: TaskEmptyPlaceholderProps
             </DialogFooter>
           </DialogContent>
         </Dialog>
-        
-        
       </div>
     </div>
   )
