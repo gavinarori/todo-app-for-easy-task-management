@@ -1,9 +1,10 @@
+"use client"
 import React from 'react'
 import { signIn } from "next-auth/react";
 import  LoadingDots from "@/icons/loading-dots";
 import {useState,} from "react";
 
-const  signIn= () => {
+const  Login= () => {
     const [signInClicked, setSignInClicked] = useState(false);
   return (
     <div className="relative py-16 bg-gradient-to-b from-gray-900 to-gray-600 ">  
@@ -46,4 +47,4 @@ const  signIn= () => {
   )
 };
 
-export default signIn;
+export default Login;
