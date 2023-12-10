@@ -21,7 +21,7 @@ export function GlobalNav() {
           onClick={close}
         >
           <div className="h-7 w-7 rounded-full border border-white/30 group-hover:border-white/50">
-            
+            ty
           </div>
 
           <h3 className="font-semibold tracking-wide text-gray-400 group-hover:text-gray-50">

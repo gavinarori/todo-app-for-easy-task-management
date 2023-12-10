@@ -65,6 +65,7 @@ model Tasks{
   description   String
   status        String
   deadline      DateTime
+  date          DateTime @default(now())
   userId        String    @db.ObjectId
   user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
