@@ -10,7 +10,7 @@ export async function main() {
   }
 }
 
-//this function component is to read posts from the db
+//this function component is to read tasks from the db
 export const GET = async (req: Request, res: NextResponse) => {
   try {
     await main();
@@ -23,7 +23,7 @@ export const GET = async (req: Request, res: NextResponse) => {
   }
 };
 
-//this function component is to write the posts to the db
+//this function component is to write the tasks to the db
 export const POST = async (req: Request, res: NextResponse) => {
   try {
     const { title, description,deadline,status } = await req.json();
