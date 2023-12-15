@@ -1,7 +1,7 @@
 import  prisma  from '@/lib/prisma';
 import { NextResponse } from "next/server";
 
-//this function component is to the db
+//this function component is to connect the db
 export async function main() {
   try {
     await prisma.$connect();
@@ -14,7 +14,7 @@ export async function main() {
 export const GET = async (req: Request, res: NextResponse) => {
   try {
     await main();
-    const tasks = await prisma.post.findMany();
+    const tasks = await prisma.tasks.findMany();
     return NextResponse.json({ message: "Success", tasks }, { status: 200 });
   } catch (err) {
     return NextResponse.json({ message: "Error", err }, { status: 500 });
