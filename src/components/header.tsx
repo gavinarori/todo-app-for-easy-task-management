@@ -1,5 +1,5 @@
 'use client';
-
+//header
 import styled from 'styled-components';
 
 const HeadContainer = styled.header`
@@ -18,7 +18,7 @@ const HeadContainer = styled.header`
 const Title = styled.span`
   margin: 0 8px;
 `;
-
+//logo
 const NextJsLogo = (props: any) => (
   <svg
     version="1.1"
